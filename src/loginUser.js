@@ -12,7 +12,6 @@ function Login() {
     function loginUser(event) {
         event.preventDefault();
         const data = {email, password}
-        console.log(data);
         axios.post("https://todo-backend-orcin.vercel.app/api/user/login", data)
             .then(response => {
                 user.setEmail(response.data.email);
