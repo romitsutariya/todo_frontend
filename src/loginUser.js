@@ -15,7 +15,6 @@ function Login() {
         console.log(data);
         axios.post("https://todo-backend-orcin.vercel.app/api/user/login", data)
             .then(response => {
-                console.log(response.data)
                 user.setEmail(response.data.email);
                 localStorage.setItem("accessToken", response.data.token);
             })

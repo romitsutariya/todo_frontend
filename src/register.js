@@ -17,7 +17,6 @@ function Register() {
         console.log(data);
         axios.post("https://todo-backend-orcin.vercel.app/api/user/register", data)
             .then(response => {
-                console.log(response.data)
                 user.setEmail(response.data.email);
                 localStorage.setItem("accessToken", response.data.token);
             })

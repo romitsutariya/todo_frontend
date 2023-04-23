@@ -18,7 +18,6 @@ function ListTodo() {
             }
         }).then(response => {
             setTodo(response.data.todos)
-            console.log(response.data.todos)
         }).catch(e => console.log(e.response));
     }
     useEffect(() => {
